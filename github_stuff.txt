@@ -1,0 +1,129 @@
+#####Push to remote branch
+
+https://devconnected.com/how-to-push-git-branch-to-remote/
+
+###More git tutorials
+
+
+(Arfan bhai call)
+
+Branch name: rnd_branch
+
+Link: https://bitbucket.org/nybsys/fall-detection/src/rnd-branch/
+
+CLI command to clone single branch: 
+
+git clone https://bitbucket.org/nybsys/fall-detection/src/rnd-branch/ --branch rnd-branch --single-branch
+
+git clone <url> —branch <branch_name> —single-branch <folder_name>
+
+
+#########Pull
+
+git pull 'remote_name' 'branch_name'
+
+git pull origin rnd-branch rnd-branch
+
+
+########CLONE
+(initial clone)
+git clone -b "branch" --single-branch "main_repo_url"
+
+########ADD
+(Add changes to files)
+git add --all
+git add file_name
+
+
+#######Commit
+(commit_stuff)
+git commit -m "Type_message"
+
+
+#######Push
+(push to remote branch)
+git push origin remote_branch:remote_branch
+
+
+
+
+#######GIt merge
+
+https://stackoverflow.com/questions/6006737/git-merge-errors
+
+https://stackoverflow.com/questions/26376832/why-does-git-say-pull-is-not-possible-because-you-have-unmerged-files
+
+git branch --list
+
+git checkout branch-name
+git checkout commit-hash
+
+
+
+
+
+
+
+
+
+
+#######################################################
+######Results and observations
+#######################################################
+
+
+Branch name: rnd_branch
+
+Link: https://bitbucket.org/nybsys/fall-detection/src/rnd-branch/
+
+CLI command to clone single branch: 
+
+git clone https://bitbucket.org/nybsys/fall-detection/src/rnd-branch/ --branch rnd-branch --single-branch
+
+
+git push origin rnd-branch:rnd-branch
+Username for 'https://bitbucket.org': imr165
+Password for 'https://imr165@bitbucket.org': 
+Counting objects: 4, done.
+Delta compression using up to 16 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 3.05 KiB | 3.05 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create pull request for rnd-branch:
+remote:   https://bitbucket.org/nybsys/fall-detection/pull-requests/new?source=rnd-branch&t=1
+remote: 
+To https://bitbucket.org/nybsys/fall-detection/src/rnd-branch/
+   309fd49..36465e9  rnd-branch -> rnd-branch
+
+
+git push origin rnd-branch:rnd-branch
+Username for 'https://bitbucket.org': imr165
+Password for 'https://imr165@bitbucket.org': 
+Counting objects: 3, done.
+Delta compression using up to 16 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 852 bytes | 852.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: 
+remote: Create pull request for rnd-branch:
+remote:   https://bitbucket.org/nybsys/fall-detection/pull-requests/new?source=rnd-branch&t=1
+remote: 
+To https://bitbucket.org/nybsys/fall-detection/src/rnd-branch/
+   36465e9..3d18edc  rnd-branch -> rnd-branch
+
+
+
+#######################################################
+######
+#######################################################
+
+
+
+
+#######################################################
+######Github Branch
+#######################################################
+
+
+git fetch && git checkout onnx_model_port
