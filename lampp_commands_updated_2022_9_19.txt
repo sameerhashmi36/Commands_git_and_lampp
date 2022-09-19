@@ -1,0 +1,82 @@
+Ref: https://stackoverflow.com/questions/40480843/xampp-another-web-server-is-already-running
+
+##########################
+Stop all servers
+##########################
+
+
+sudo /etc/init.d/apache2 stop
+
+sudo /etc/init.d/mysql stop
+
+sudo /etc/init.d/proftpd stop
+
+
+##########################
+Stop nginx
+##########################
+
+sudo systemctl stop nginx
+
+
+##########################
+(GUI Command below)
+##########################
+
+sudo /opt/lampp/manager-linux-x64.run
+
+
+##########################
+For FTP port
+##########################
+
+
+sudo gedit /opt/lampp/etc/proftpd.conf
+
+#change PORT to random number 21 to 28(or random number)
+
+sudo gedit /opt/lampp/xampp 
+
+# testport 21 to 28(or random number)
+
+
+##########################
+Starting xampp server
+##########################
+
+sudo /opt/lampp/lampp restart
+
+sudo /opt/lampp/lampp start
+
+
+###########################################
+Allowing Hosts from other PCs in phpmyadmin
+############################################
+
+sudo find / -iname "httpd-xampp.conf"
+
+sudo vim /opt/lampp/etc/extra/httpd-xampp.conf
+
+Change From:
+<Directory "/opt/lampp/phpmyadmin">
+    AllowOverride AuthConfig limit
+    local
+    ErrorDocument 403 /error/XAMPP_FORBIDDEN.html.var
+</Directory>
+
+Change to:
+<Directory "/opt/lampp/phpmyadmin">
+    AllowOverride all
+    Require all granted
+    ErrorDocument 403 /error/XAMPP_FORBIDDEN.html.var
+</Directory>
+
+Mysql my.cnf
+#skip-networking=0
+#skip-bind-address
+add skip-grant-tables
+
+
+
+
+
